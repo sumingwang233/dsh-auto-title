@@ -1,0 +1,6 @@
+node_modules/
+test/.tmp/
+*.log
+log.jsonl
+settings.json
+.DS_Store

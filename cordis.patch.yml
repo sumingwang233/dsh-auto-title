@@ -1,0 +1,12 @@
+# Bundle layer of dsh-auto-title, applied automatically when the package
+# is installed as a profile bundle (package.json declares dsh.bundle.patch).
+#
+# `ctx.sessionTitle` accepts exactly one provider. The base bundle registers its
+# own first-prompt provider under the Loader id `session-title-llm`; disable it
+# so this bundle's provider can take the slot, then insert this row.
+- id: session-title-llm
+  disabled: true
+
+- insert:
+    - id: auto-title
+      name: 'dsh-auto-title'
